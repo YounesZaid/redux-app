@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,12 +7,11 @@ const App = ({ store }) => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React & Redux Test</h1>
+      <h1 className="App-title">Welcome to React + Redux Apps Training</h1>
     </header>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-      Time to understand some <code>REDUX</code> and MOVE ON !
-        </p>
+    <p className="counter-app">
+      Example of a Counter with some Redux
+    </p>
     <Counter value={store.getState()}
       onIncrement={() => {
         store.dispatch({
@@ -24,15 +23,31 @@ const App = ({ store }) => (
           type: 'DECREMENT'
         })
       }} />
+    <div className="todo-app">
+      <p>Todo App with Redux</p>
+    </div>
+    <TodoApp />
   </div>
 )
 
+const TodoApp = () => (
+  <form className="todo-form">
+    <input />
+    <button onClick={(e) => {
+      alert("clicked");
+    }}>
+      Add todo
+    </button>
+  </form>
+)
 
 const Counter = ({ value, onIncrement, onDecrement }) => (
-  <div>
+  <div className="counter-app-container">
     <h1>{value}</h1>
-    <button onClick={onIncrement}>+</button>
-    <button onClick={onDecrement}>-</button>
+    <div className="button-wrapper">
+      <button onClick={onIncrement}>+</button>
+      <button onClick={onDecrement}>-</button>
+    </div>
   </div>
 )
 

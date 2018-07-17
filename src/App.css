@@ -18,10 +18,70 @@
   font-size: 1.5em;
 }
 
-.App-intro {
+.counter-app{
   font-size: large;
+  background: #fdfdfd;
+  padding: 20px 0;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
+  margin: 5px 20px;
+  text-align: center;
 }
 
+.App .counter-app-container > h1 {
+  margin: 5px;
+}
+
+.button-wrapper {
+  margin: 5px;
+}
+
+.button-wrapper > button {
+  margin-right: 5px;
+}
+
+.button-wrapper button {
+  border: 1px solid #7a83b1;
+  background: #7a83b1;
+  color: #fff;
+  width: 60px;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-wrapper button:hover {
+  background: #8c93b3
+}
+
+.App .todo-app {
+  font-size: large;
+  background: #fdfdfd;
+  padding: 20px 0;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.1);
+  text-align: center;
+  margin: 20px;
+}
+
+.App .todo-app p {
+  margin: 0;
+}
+
+.App .todo-form button {
+  border: 1px solid #7a83b1;
+  background: #7a83b1;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.App .todo-form input {
+  height: 3em;
+  margin-right: 5px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
